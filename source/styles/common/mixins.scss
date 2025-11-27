@@ -1,0 +1,19 @@
+@mixin font-additional {
+  font-family: "TT Runs", "Arial", sans-serif;
+}
+
+@mixin transition {
+  transition: all 0.3s ease;
+}
+
+@mixin button-hover {
+  background-color: $color-reverse;
+}
+
+@mixin button-active {
+  background-color: $color-reverse;
+}
+
+@mixin button-focus {
+  color: $color-basic;
+}

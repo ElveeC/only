@@ -1,0 +1,46 @@
+@import "../common/mixins.scss";
+
+.favorite-button {
+  @include transition;
+
+  display: flex;
+  width: 42px;
+  height: 42px;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-basic;
+  border-radius: 15px;
+
+  &:hover {
+    @include button-hover;
+  }
+
+  @media (max-width: $vp-1440) {
+    width: 36px;
+    height: 36px;
+    border-radius: 12px;
+  }
+
+  @media (max-width: $vp-1440) {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.favorite-button__icon {
+  color: $color-reverse;
+
+  @media (max-width: $vp-1440) {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width: $vp-1280) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.favorite-button:hover .favorite-button__icon {
+  color: $color-basic;
+}
