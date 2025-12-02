@@ -10,8 +10,16 @@
   background-color: $color-reverse;
 }
 
+@mixin button-hover-accent {
+  background-color: $color-accent;
+}
+
 @mixin button-active {
   background-color: $color-reverse;
+}
+
+@mixin button-active-accent {
+  background-color: $color-accent;
 }
 
 @mixin button-focus {

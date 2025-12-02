@@ -1,0 +1,146 @@
+@import "../common/mixins.scss";
+
+.hero {
+  padding: 80px 30px 50px;
+
+  @media (max-width: $vp-1440) {
+    padding: 60px 20px 40px;
+  }
+
+  @media (max-width: $vp-1280) {
+    padding: 60px 20px 30px;
+  }
+
+  @media (max-width: $vp-768) {
+    padding: 50px 20px 20px;
+  }
+
+  @media (max-width: $vp-375) {
+    padding: 32px 20px 20px;
+  }
+}
+
+.hero__inner-top {
+  display: grid;
+  margin-bottom: 160px;
+  grid-template-columns: 1fr auto auto 1fr;
+  grid-template-areas:
+    "title .     .     awards"
+    ".     video video awards";
+  gap: 30px 15px;
+
+  @media (max-width: $vp-1770) {
+    grid-template-areas:
+      "title title .     awards"
+      ".     video video awards";
+  }
+
+
+  @media (max-width: $vp-1440) {
+    margin-bottom: 110px;
+    grid-template-areas:
+      "title title .     awards"
+      ".     video video awards";
+  }
+
+  @media (max-width: $vp-1280) {
+    gap: 30px 5px;
+  }
+
+  @media (max-width: $vp-768) {
+    gap: 110px 0;
+    grid-template-areas:
+      "title title title ."
+      ".     video video .";
+  }
+
+  @media (max-width: $vp-480) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.hero__title {
+  @include font-additional;
+
+  grid-area: title;
+  margin: 0;
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 125%;
+  letter-spacing: -0.03em;
+
+
+  @media (max-width: $vp-1440) {
+    font-size: 50px;
+  }
+
+  @media (max-width: $vp-1280) {
+    font-size: 42px;
+    letter-spacing: -0.01em;
+  }
+
+  @media (max-width: $vp-768) {
+    font-size: 38px;
+  }
+
+  @media (max-width: $vp-375) {
+    font-size: 32px;
+  }
+}
+
+.hero__video {
+  grid-area: video;
+  width: 608px;
+  height: 304px;
+  border-radius: 20px;
+
+  @media (max-width: $vp-1440) {
+    width: 456px;
+    height: 230px;
+  }
+
+  @media (max-width: $vp-768) {
+    width: 416px;
+    height: 226px;
+  }
+
+  @media (max-width: $vp-480) {
+    margin: 0 auto;
+    width: 277px;
+    height: 150px;
+  }
+
+  @media (max-width: $vp-375) {
+    width: 225px;
+    height: 135px;
+  }
+}
+
+.hero__video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+
+  @media (max-width: $vp-1280) {
+    border-radius: 15px;
+  }
+
+  @media (max-width: $vp-768) {
+    border-radius: 12px;
+  }
+
+  @media (max-width: $vp-375) {
+    border-radius: 15px;
+  }
+}
+
+.hero__awards {
+  grid-area: awards;
+  margin-left: auto;
+
+  @media (max-width: $vp-768) {
+    display: none;
+  }
+}
