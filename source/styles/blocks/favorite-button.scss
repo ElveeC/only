@@ -15,13 +15,13 @@
     @include button-hover;
   }
 
-  @media (max-width: $vp-1440) {
+  @media (max-width: $vp-1919) {
     width: 36px;
     height: 36px;
     border-radius: 12px;
   }
 
-  @media (max-width: $vp-1440) {
+  @media (max-width: $vp-1439) {
     width: 32px;
     height: 32px;
   }
@@ -30,12 +30,12 @@
 .favorite-button__icon {
   color: $color-reverse;
 
-  @media (max-width: $vp-1440) {
+  @media (max-width: $vp-1919) {
     width: 20px;
     height: 20px;
   }
 
-  @media (max-width: $vp-1280) {
+  @media (max-width: $vp-1439) {
     width: 16px;
     height: 16px;
   }

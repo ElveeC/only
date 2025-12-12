@@ -1,12 +1,12 @@
 .nav {
   &--closed {
-    @media (max-width: $vp-768) {
+    @media (max-width: $vp-1279) {
       display: none;
     }
   }
 
   &--open {
-    @media (max-width: $vp-768) {
+    @media (max-width: $vp-1279) {
       display: block;
     }
   }
@@ -18,11 +18,7 @@
   gap: 32px;
   text-transform: lowercase;
 
-  @media (max-width: $vp-1024) {
-    gap: 24px;
-  }
-
-  @media (max-width: $vp-768) {
+  @media (max-width: $vp-1279) {
     display: block;
     flex-direction: column;
   }
