@@ -1,0 +1,147 @@
+@import "../common/mixins.scss";
+
+.portfolio {
+  padding: 30px;
+
+  @media (max-width: $vp-1279) {
+    padding: 20px;
+  }
+}
+
+.portfolio__inner-top {
+  margin-bottom: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+
+  @media (max-width: $vp-1439) {
+    margin-bottom: 70px;
+  }
+
+  @media (max-width: $vp-1279) {
+    margin-bottom: 60px;
+    gap: 20px;
+  }
+}
+
+.portfolio__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: lowercase;
+
+  @media (max-width: $vp-1439) {
+    font-size: 13px;
+  }
+
+  @media (max-width: $vp-1279) {
+    font-size: 12px;
+  }
+}
+
+.portfolio__description-wrapper {
+  padding-right: 200px;
+
+  @media (max-width: $vp-1279) {
+    padding-right: 0;
+  }
+}
+
+.portfolio__description-title {
+  @include font-additional;
+
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
+  line-height: 120%;
+
+  @media (max-width: $vp-1919) {
+    font-size: 26px;
+  }
+
+  @media (max-width: $vp-1439) {
+    font-size: 20px;
+  }
+
+  @media (max-width: $vp-1279) {
+    margin-bottom: 20px;
+  }
+}
+
+.portfolio__description {
+  font-size: 16px;
+  line-height: 140%;
+
+
+  @media (max-width: $vp-1439) {
+    font-size: 15px;
+  }
+}
+
+.portfolio__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 80px 30px;
+
+  @media (max-width: $vp-1919) {
+    gap: 70px 20px;
+  }
+
+  @media (max-width: $vp-1279) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $vp-767) {
+    display: none;
+  }
+}
+
+.portfolio__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.portfolio__img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.portfolio__item img {
+  @include transition;
+
+  position: absolute;
+  width: 100%;
+  object-fit: fill;
+  aspect-ratio: 1/1;
+  border-radius: 30px;
+  cursor: pointer;
+
+  @media (max-width: $vp-1439) {
+    border-radius: 25px;
+  }
+
+  @media (max-width: $vp-1279) {
+    border-radius: 20px;
+  }
+
+  &:hover {
+    border-radius: 60px;
+    transform: scale(1.03);
+  }
+}
+
+.portfolio__card-title {
+  @include font-additional;
+
+  margin: 0;
+  padding: 0 20px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 125%;
+}
+
+.portfolio__card-descrition {
+  padding: 0 20px;
+}
