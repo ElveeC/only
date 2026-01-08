@@ -1,10 +1,18 @@
 @import "../common/mixins.scss";
 
 .portfolio {
-  padding: 30px;
+  padding: 160px 30px;
+
+  @media (max-width: $vp-1919) {
+    padding: 130px 30px;
+  }
+
+  @media (max-width: $vp-1439) {
+    padding: 100px 30px;
+  }
 
   @media (max-width: $vp-1279) {
-    padding: 20px;
+    padding: 80px 20px;
   }
 }
 
@@ -21,6 +29,13 @@
   @media (max-width: $vp-1279) {
     margin-bottom: 60px;
     gap: 20px;
+  }
+
+  @media (max-width: $vp-767) {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column-reverse;
+    row-gap: 70px;
   }
 }
 
@@ -76,6 +91,14 @@
   @media (max-width: $vp-1439) {
     font-size: 15px;
   }
+
+  &--upper {
+    display: none;
+
+    @media (max-width: $vp-767) {
+      display: block;
+    }
+  }
 }
 
 .portfolio__list {
@@ -92,7 +115,15 @@
   }
 
   @media (max-width: $vp-767) {
-    display: none;
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+
+  &--big {
+    @media (max-width: $vp-767) {
+      display: none;
+    }
   }
 }
 
@@ -104,8 +135,11 @@
 
 .portfolio__img-wrapper {
   position: relative;
-  width: 100%;
   aspect-ratio: 1/1;
+
+  @media (max-width: $vp-767) {
+    width: 315px;
+  }
 }
 
 .portfolio__item img {
@@ -144,4 +178,25 @@
 
 .portfolio__card-descrition {
   padding: 0 20px;
+}
+
+.portfolio__group-list {
+  display: none;
+
+  @media (max-width: $vp-767) {
+    display: flex;
+    flex-direction: column;
+    row-gap: 70px;
+  }
+}
+
+.portfolio__group-title {
+  @include font-additional;
+
+  margin: 0;
+  margin-bottom: 40px;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 120%;
 }
