@@ -2,6 +2,7 @@
 
 .button {
   @include font-additional;
+  @include transition;
 
   display: flex;
   flex-wrap: wrap;
@@ -18,6 +19,7 @@
   text-transform: lowercase;
   border-radius: 20px;
   box-sizing: border-box;
+  cursor: pointer;
 
   @media (max-width: $vp-1919) {
     padding: 22px 65px;
@@ -33,5 +35,17 @@
     padding: 16px 53px;
     font-size: 13px;
     border-radius: 12px;
+  }
+
+  &:hover {
+    @include button-hover;
+  }
+
+  &:active {
+    @include button-active;
+  }
+
+  &:focus {
+    @include button-focus;
   }
 }

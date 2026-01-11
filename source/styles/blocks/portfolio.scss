@@ -161,8 +161,10 @@
   }
 
   &:hover {
-    border-radius: 60px;
-    transform: scale(1.03);
+    @media (min-width: $vp-1279 + 1px) {
+      border-radius: 60px;
+      transform: scale(1.03);
+    }
   }
 }
 

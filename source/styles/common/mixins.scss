@@ -7,21 +7,34 @@
 }
 
 @mixin button-hover {
-  background-color: $color-reverse;
+  @media (min-width: $vp-1279 + 1px) {
+    color: $color-basic;
+    background-color: $color-reverse;
+  }
 }
 
 @mixin button-hover-accent {
-  background-color: $color-accent;
+  @media (min-width: $vp-1279 + 1px) {
+    background-color: $color-accent;
+  }
 }
 
 @mixin button-active {
-  background-color: $color-reverse;
+  @media (min-width: $vp-1279 + 1px) {
+    color: $color-basic;
+    background-color: $color-reverse;
+  }
 }
 
 @mixin button-active-accent {
-  background-color: $color-accent;
+  @media (min-width: $vp-1279 + 1px) {
+    background-color: $color-accent;
+  }
 }
 
 @mixin button-focus {
-  color: $color-basic;
+  @media (min-width: $vp-1279 + 1px) {
+    color: $color-basic;
+    background-color: $color-accent;
+  }
 }
