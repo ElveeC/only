@@ -1,0 +1,54 @@
+.top-projects__list-wrapper {
+  overflow-x: hidden;
+
+  @media (max-width: $vp-1279) {
+    overflow-x: scroll;
+    scrollbar-width: none;
+  }
+}
+
+.top-projects__list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  transition: transform 1s ease;
+
+  @media (max-width: $vp-1279) {
+    gap: 15px;
+  }
+
+  @media (max-width: $vp-767) {
+    gap: 10px;
+  }
+}
+
+
+.top-projects__item {
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  background: linear-gradient(#016b6a 0%, #02d1cf 30%, #ffffff 90%);
+  min-width: 357px;
+  width: 357px;
+
+  @media (max-width: $vp-767) {
+    min-width: 315px;
+    width: 315px;
+  }
+
+  &--severstal {
+    background: linear-gradient(#016b6a 0%, #02d1cf 30%, #ffffff 90%);
+  }
+}
+
+.top-projects__next-button {
+  @media (max-width: $vp-1279) {
+    display: none;
+  }
+}
+
+.top-projects__button {
+  @media (max-width: $vp-1279) {
+    display: none;
+  }
+}

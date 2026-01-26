@@ -1,21 +1,5 @@
 @import "../common/mixins.scss";
 
-.portfolio {
-  padding: 160px 30px;
-
-  @media (max-width: $vp-1919) {
-    padding: 130px 30px;
-  }
-
-  @media (max-width: $vp-1439) {
-    padding: 100px 30px;
-  }
-
-  @media (max-width: $vp-1279) {
-    padding: 80px 20px;
-  }
-}
-
 .portfolio__inner-top {
   margin-bottom: 100px;
   display: grid;
@@ -36,21 +20,6 @@
     display: flex;
     flex-direction: column-reverse;
     row-gap: 70px;
-  }
-}
-
-.portfolio__title {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 500;
-  text-transform: lowercase;
-
-  @media (max-width: $vp-1439) {
-    font-size: 13px;
-  }
-
-  @media (max-width: $vp-1279) {
-    font-size: 12px;
   }
 }
 
@@ -118,6 +87,7 @@
     display: flex;
     overflow-x: scroll;
     scrollbar-width: none;
+    column-gap: 10px;
   }
 
   &--big {
@@ -178,7 +148,7 @@
   line-height: 125%;
 }
 
-.portfolio__card-descrition {
+.portfolio__card-description {
   padding: 0 20px;
 }
 

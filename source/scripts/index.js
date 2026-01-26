@@ -1,1 +1,3 @@
-/* в этот файл добавляет скрипты*/
+import { initProjectsSlider } from './projects-slider';
+
+initProjectsSlider();
