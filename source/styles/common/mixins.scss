@@ -3,13 +3,15 @@
 }
 
 @mixin transition {
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, scale 0.3s ease, background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 @mixin button-hover {
   @media (min-width: $vp-1279 + 1px) {
     color: $color-basic;
     background-color: $color-reverse;
+    border-radius: 50px;
+    box-shadow: 0 0 5px $color-basic-60;
   }
 }
 
