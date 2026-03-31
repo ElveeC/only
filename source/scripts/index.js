@@ -1,3 +1,7 @@
 import { initProjectsSlider } from './projects-slider';
+import { initFooterAnimation } from './footer-animate';
 
-initProjectsSlider();
+document.addEventListener('DOMContentLoaded', () => {
+  initProjectsSlider();
+  initFooterAnimation();
+});
