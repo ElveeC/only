@@ -53,15 +53,54 @@
 }
 
 .top-projects__button-wrapper {
+  display: flex;
+  gap: 16px;
+
   @media (max-width: $vp-1279) {
     display: none;
   }
 }
 
 .top-projects__button {
+  @include font-additional;
   @include transition;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  width: 69px;
+  height: 69px;
+  background: $color-reverse;
+  border-radius: 20px;
+  box-sizing: border-box;
   cursor: pointer;
+  border: none;
+
+  @media (max-width: $vp-1439) {
+    padding: 20px;
+
+    width: 60px;
+    height: 60px;
+  }
+
+  &:not(:disabled):hover {
+    @include button-hover;
+  }
+
+  &:not(:disabled):active {
+    @include button-active;
+  }
+
+  &:focus {
+    @include button-focus;
+  }
+
+  &:disabled {
+    color: $color-basic-60;
+    background-color: $color-secondary;
+    cursor: default;
+  }
 
   @media (max-width: $vp-1279) {
     display: none;
