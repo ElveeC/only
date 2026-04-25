@@ -1,0 +1,48 @@
+.marquee {
+  padding: 10px 20px;
+}
+
+.marquee__inner {
+  overflow: hidden;
+  padding: 10px 20px;
+  background-color: $color-accent;
+  border-radius: 20px;
+  box-shadow: inset 0 0 10px 10px $background-basic;
+}
+
+.marquee__content {
+  display: flex;
+  gap: 8px;
+  padding: 10px 0;
+  animation-name: marquee-moving;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.marquee__text {
+  @include font-additional;
+  font-size: 24px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-transform: uppercase;
+
+  @media (max-width: $vp-767) {
+    font-size: 14px;
+  }
+
+  @media (max-width: $vp-375) {
+    font-size: 12px;
+  }
+}
+
+
+@keyframes marquee-moving {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
